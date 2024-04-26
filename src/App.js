@@ -19,8 +19,8 @@ function App() {
    return (
     <div>
       <Counter val = {0} /> {/* Render the Counter component */}
-      <SubjectList data={CMSCSubjects} title={'Computer Science Subjects'} />
-      <SubjectList data={CHEMSubjects} title= {'Chemistry Subjects'} />
+      <SubjectList list={CMSCSubjects} title={'Computer Science Subjects'} />
+      <SubjectList list={CHEMSubjects} title= {'Chemistry Subjects'} />
       <TempConverter /> 
     </div>
   );
