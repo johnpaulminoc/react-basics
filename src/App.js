@@ -1,6 +1,7 @@
 import React from 'react';
 import { SubjectList } from './SubjectList';
-import TempConverter from './TempConverter'; // Import the TempConverter component
+import TempConverter from './TempConverter';
+import Counter from './Counter'; // Import the Counter component
 
 const CMSCSubjects = [
   { code: "CMSC100", description: "Web Programming", id: 1 },
@@ -17,6 +18,7 @@ const CHEMSubjects = [
 function App() {
    return (
     <div>
+      <Counter val = {0} /> {/* Render the Counter component */}
       <SubjectList data={CMSCSubjects} title={'Computer Science Subjects'} />
       <SubjectList data={CHEMSubjects} title= {'Chemistry Subjects'} />
       <TempConverter /> 

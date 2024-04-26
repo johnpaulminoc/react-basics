@@ -1,7 +1,6 @@
 import { useState } from "react";
-
-export function SubjectList(props) {
-    const subjectlist = props.data;
+export function SubjectList(props){
+    const subjectlist = props.list;
     const [subjects, setSubjects] = useState(subjectlist);
     
     function addSubject() {
@@ -14,13 +13,15 @@ export function SubjectList(props) {
 
     return (
         <>
-            <p>Show list: </p>
-            <ol>
-                {subjects.map((subject) => {
-                    return <li key={subject.code}>{subject.code} - {subject.description}</li>;
-                })}
-            </ol>
-            <button onClick={addSubject}>Add Subject</button>
+        <p>Show list: </p>
+        <ol>
+            {
+            subjects.map((subject)=>{
+                return <li>{subject.code} - {subject.description}</li>
+            })
+            }
+        </ol>
+        <button onClick={addSubject}>Add Subject</button>
         </>
     );
 }
